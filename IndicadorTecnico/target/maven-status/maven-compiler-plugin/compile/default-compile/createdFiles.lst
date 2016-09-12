@@ -1,0 +1,12 @@
+webservice\CalculadoraTecnica.class
+business\IRF.class
+business\MediaMovelExponencial.class
+YahooFinance\YahooFinance.class
+YahooFinance\ConvertInputStream.class
+model\Cotacoes.class
+business\CalculadoraServiceImpl.class
+business\MediaMovelSimples.class
+webservice\CalculadoraTecnicaInterface.class
+YahooFinance\XmlConverter.class
+business\ATR.class
+model\Cotacao.class
