@@ -1,5 +1,7 @@
 package model;
 
+import java.text.SimpleDateFormat;
+
 public class StockTrend {
 	
 	Cotacao quotation;
@@ -15,14 +17,21 @@ public class StockTrend {
 	public Cotacao getQuotation() {
 		return quotation;
 	}
+	
 	public void setQuotation(Cotacao quotation) {
 		this.quotation = quotation;
 	}
+	
 	public double getTrendValue() {
 		return trendValue;
 	}
+	
 	public void setTrendValue(double trendValue) {
 		this.trendValue = trendValue;
 	}
 	
+	public String getDate(){
+		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+		return sdf.format(this.quotation.getDate().getTime());
+	}
 }
