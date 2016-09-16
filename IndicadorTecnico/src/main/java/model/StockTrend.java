@@ -6,6 +6,7 @@ public class StockTrend {
 	
 	Cotacao quotation;
 	double trendValue;
+	String data;
 	
 	public StockTrend(){}
 	
@@ -32,6 +33,6 @@ public class StockTrend {
 	
 	public String getDate(){
 		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
-		return sdf.format(this.quotation.getDate().getTime());
+		return data = sdf.format(this.quotation.getDate().getTime());
 	}
 }
