@@ -11,7 +11,7 @@ import model.StockTrend;
 public interface CalculadoraTecnicaInterface {
 	
 	@WebMethod(action = "calcula_mms", operationName = "CalculaMMS")
-	public List<StockTrend> calcularMediaMovel(String simbol, String dtInicio, String dtFim, int periodo);
+	public List<StockTrend> calcularMediaMovel(String simbol, Calendar dtInicio, Calendar dtFim, int periodo);
 	
 	@WebMethod(action = "calcula_mme", operationName="CalculaMME")
 	public List<StockTrend> calcularMediaExponencial(String simbol, Calendar dtInicio, Calendar dtFim, int periodo);

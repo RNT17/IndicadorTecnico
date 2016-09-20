@@ -13,6 +13,9 @@ public class StockTrend {
 	public StockTrend(Cotacao cotacao, double trendValue){
 		this.quotation = cotacao;
 		this.trendValue = trendValue;
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+		this.data = sdf.format(this.quotation.getDate().getTime());
 	}
 	
 	public Cotacao getQuotation() {
@@ -31,8 +34,11 @@ public class StockTrend {
 		this.trendValue = trendValue;
 	}
 	
+	public void setDate(String date){
+		this.data = date;
+	}
+	
 	public String getDate(){
-		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
-		return data = sdf.format(this.quotation.getDate().getTime());
+		return data;
 	}
 }
