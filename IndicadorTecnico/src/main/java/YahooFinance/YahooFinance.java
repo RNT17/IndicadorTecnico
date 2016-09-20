@@ -87,7 +87,7 @@ public Cotacoes getCotacoes(String acao, String dataInicio, String dataFim) thro
 	}
 	
 	public void setPeriodo(Calendar dataInicio, int periodo){
-		dataInicio.add(Calendar.DAY_OF_MONTH, -(periodo+2));
+		dataInicio.add(Calendar.DATE, -30);
 	}
 
 	private String extractTextFromURL(URL url) throws MalformedURLException, IOException {
