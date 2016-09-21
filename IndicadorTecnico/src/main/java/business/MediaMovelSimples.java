@@ -26,7 +26,7 @@ public class MediaMovelSimples {
 				
 				StockTrend stSMA = new StockTrend(cotacao, trend);			
 				listStSMA.add(stSMA);
-								
+				
 				tempCotacoes.remove(0);
 			}
 		}

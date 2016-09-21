@@ -25,11 +25,11 @@ public class YahooFinance {
 							+ "(%22" + acao + "%22)%20and%20" 
 							+ "startDate%20=%20%22" + strDataInicio + "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" 
 							+ URL_DIAGNOSTIC;		
-
+		
 		Cotacoes cotacoes = null;
 		try {						
 			
-			String urlFinance = URL_YAHOOAPI;			
+			String urlFinance = URL_YAHOOAPI;
 			URL url = new URL(urlFinance);
 			String textFromURL = extractTextFromURL(url);
 			
