@@ -14,7 +14,7 @@ public class StockTrend {
 		this.quotation = cotacao;
 		this.trendValue = trendValue;
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		this.data = sdf.format(this.quotation.getDate().getTime());
 	}
 	

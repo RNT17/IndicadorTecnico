@@ -15,16 +15,16 @@ public class Tester {
 		System.out.println("Loading...");
 		Calendar dataInicio = Calendar.getInstance();
 		Calendar dataFim = Calendar.getInstance();
-		dataInicio.set(2016, Calendar.SEPTEMBER, 01);
-		dataFim.set(2016, Calendar.SEPTEMBER, 17);
+		dataInicio.set(2016, Calendar.JANUARY, 01);
+		dataFim.set(2016, Calendar.SEPTEMBER, 17);	
 		
-		CalculadoraServiceImpl calculadoraTecnica = new CalculadoraServiceImpl();		
+		/*CalculadoraServiceImpl calculadoraTecnica = new CalculadoraServiceImpl();		
 		List<StockTrend> stMMS = calculadoraTecnica.calcularMediaMovel("GOOGL", dataInicio, dataFim, 14);
 		//List<StockTrend> stEMA = calculadoraTecnica.calcularMediaExponencial("GOOGL", dataInicio, dataFim, 14);		
 		//List<StockTrend> stRSI = calculadoraTecnica.calcularIndiceForcaRelativa("GOOGL", dataInicio, dataFim, 14);		
 		//List<StockTrend> stATR = calculadoraTecnica.calcularAverageTrueRange("GOOGL", dataInicio, dataFim, 14);
 		
-		printStockTrend(stMMS);
+		printStockTrend(stMMS);*/
 	}
 	
 	public static void printStockTrend(List<StockTrend> listSt) {
