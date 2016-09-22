@@ -23,8 +23,7 @@ public class Tester {
 		//List<StockTrend> stEMA = calculadoraTecnica.calcularMediaExponencial("GOOGL", dataInicio, dataFim, 14);		
 		//List<StockTrend> stRSI = calculadoraTecnica.calcularIndiceForcaRelativa("GOOGL", dataInicio, dataFim, 14);		
 		//List<StockTrend> stATR = calculadoraTecnica.calcularAverageTrueRange("GOOGL", dataInicio, dataFim, 14);
-		
-		//printStockTrend(stMMS);
+		printStockTrend(stMMS);
 	}
 	
 	public static void printStockTrend(List<StockTrend> listSt) {

@@ -26,20 +26,15 @@ public class YahooFinance {
 							+ "startDate%20=%20%22" + strDataInicio + "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" 
 							+ URL_DIAGNOSTIC;		
 		
-		/*String urlFinance = URL_YAHOOAPI + "(%22" + acao + "%22)%20and%20" + "startDate%20=%20%22" + strDataInicio
-		+ "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" + URL_DIAGNOSTIC;*/
-		
 		Cotacoes cotacoes = null;
 		try {						
 			
 			String urlFinance = URL_YAHOOAPI;
-			
 			URL url = new URL(urlFinance);
 			String textFromURL = extractTextFromURL(url);
 			
 			CotacoesFactory cotacoesNegocio = new CotacoesFactory();
 			cotacoes = cotacoesNegocio.criarCotacoes(textFromURL);
-			//printStockList(cotacoes);		
 			
 		} catch (MalformedURLException e) {
 			System.out.println("Erro ao criar URL. Formato invalido.");
@@ -51,9 +46,9 @@ public class YahooFinance {
 
 		return cotacoes;
 	}
-	
+		
 	public void setPeriodo(Calendar dataInicio, int periodo){
-		dataInicio.add(Calendar.DATE, -30);
+		dataInicio.add(Calendar.MONTH, -1);
 	}
 
 	private String extractTextFromURL(URL url) throws MalformedURLException, IOException {
