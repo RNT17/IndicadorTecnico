@@ -19,8 +19,8 @@ public class CalculadoraServiceImpl {
 		List<StockTrend> stockTrend = null;		
 
 		try {
-			YahooFinance yahooFinance = new YahooFinance();
-			yahooFinance.setPeriodo(dtInicio, periodo);
+			YahooFinance yahooFinance = new YahooFinance();				
+			yahooFinance.setPeriodo(dtInicio, periodo);			
 			Cotacoes cotacoes = yahooFinance.getCotacoes(simbol, dtInicio, dtFim);
 
 			MediaMovelSimples sma = new MediaMovelSimples();

@@ -26,20 +26,15 @@ public class YahooFinance {
 							+ "startDate%20=%20%22" + strDataInicio + "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" 
 							+ URL_DIAGNOSTIC;		
 		
-		/*String urlFinance = URL_YAHOOAPI + "(%22" + acao + "%22)%20and%20" + "startDate%20=%20%22" + strDataInicio
-		+ "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" + URL_DIAGNOSTIC;*/
-		
 		Cotacoes cotacoes = null;
 		try {						
 			
 			String urlFinance = URL_YAHOOAPI;
-			
 			URL url = new URL(urlFinance);
 			String textFromURL = extractTextFromURL(url);
 			
 			CotacoesFactory cotacoesNegocio = new CotacoesFactory();
 			cotacoes = cotacoesNegocio.criarCotacoes(textFromURL);
-			//printStockList(cotacoes);	
 			
 		} catch (MalformedURLException e) {
 			System.out.println("Erro ao criar URL. Formato invalido.");
@@ -51,43 +46,9 @@ public class YahooFinance {
 
 		return cotacoes;
 	}
-	
-public Cotacoes getCotacoes(String acao, String dataInicio, String dataFim) throws Exception {
-				
-		String URL_DIAGNOSTIC = "&diagnostics=false&env=store://datatables.org/alltableswithkeys";
-		String URL_YAHOOAPI = "http://query.yahooapis.com/v1/public/yql?q=%20select%20*%20from%20yahoo.finance.historicaldata%20where%20symbol%20in%20"
-							+ "(%22" + acao + "%22)%20and%20" 
-							+ "startDate%20=%20%22" + dataInicio + "%22%20and%20" + "endDate%20=%20%22" + dataFim + "%22%20" 
-							+ URL_DIAGNOSTIC;		
 		
-		/*String urlFinance = URL_YAHOOAPI + "(%22" + acao + "%22)%20and%20" + "startDate%20=%20%22" + strDataInicio
-		+ "%22%20and%20" + "endDate%20=%20%22" + strDataFim + "%22%20" + URL_DIAGNOSTIC;*/
-		
-		Cotacoes cotacoes = null;
-		try {						
-			
-			String urlFinance = URL_YAHOOAPI;
-			
-			URL url = new URL(urlFinance);
-			String textFromURL = extractTextFromURL(url);
-			
-			CotacoesFactory cotacoesNegocio = new CotacoesFactory();
-			cotacoes = cotacoesNegocio.criarCotacoes(textFromURL);
-			//printStockList(cotacoes);	
-			
-		} catch (MalformedURLException e) {
-			System.out.println("Erro ao criar URL. Formato invalido.");
-			System.exit(1);
-		} catch (IOException e) {
-			System.out.println("Erro ao acessar URL. Verifique sua conexão com a internet.");
-			System.exit(1);
-		}
-
-		return cotacoes;
-	}
-	
 	public void setPeriodo(Calendar dataInicio, int periodo){
-		dataInicio.add(Calendar.DATE, -30);
+		dataInicio.add(Calendar.MONTH, -1);
 	}
 
 	private String extractTextFromURL(URL url) throws MalformedURLException, IOException {
@@ -107,14 +68,14 @@ public Cotacoes getCotacoes(String acao, String dataInicio, String dataFim) thro
 			String dtStr = format.format(st.getDate().getTime());
 			System.out.println("Data: " + dtStr);
 			//System.out.println("Open: " + st.getOpen());
-			System.out.println("Low: " + st.getLow());
-			System.out.println("High: " + st.getHigh());
+			//System.out.println("Low: " + st.getLow());
+			//System.out.println("High: " + st.getHigh());
 			//System.out.println("Volume: " + st.getVolume());
 			System.out.println("Close: " + st.getClose());
-			System.out.println("Fechamento Anterior: " + st.getAdj_close());
-			System.out.println("Variacao: " + st.getVariacao());
+			//System.out.println("Fechamento Anterior: " + st.getAdj_close());
+			//System.out.println("Variacao: " + st.getVariacao());
 			//System.out.println("Ordem dia: " + st.getIndexDia());
-			System.out.println("TR: " + st.getTrueRange() + "\n");
+			//System.out.println("TR: " + st.getTrueRange() + "\n");
 		}
 	}
 
