@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import business.CotacoesFactory;
-import model.Cotacao;
 import model.Cotacoes;
 
 public class YahooFinance {
@@ -59,24 +58,4 @@ public class YahooFinance {
 		ConvertInputStream convert = new ConvertInputStream();
 		return convert.getStringFromInputStream(in);
 	}
-
-	public void printStockList(Cotacoes stockList) {
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		
-		for (Cotacao st : stockList.getListaCotacoes()) 
-		{
-			String dtStr = format.format(st.getDate().getTime());
-			System.out.println("Data: " + dtStr);
-			//System.out.println("Open: " + st.getOpen());
-			//System.out.println("Low: " + st.getLow());
-			//System.out.println("High: " + st.getHigh());
-			//System.out.println("Volume: " + st.getVolume());
-			System.out.println("Close: " + st.getClose());
-			//System.out.println("Fechamento Anterior: " + st.getAdj_close());
-			//System.out.println("Variacao: " + st.getVariacao());
-			//System.out.println("Ordem dia: " + st.getIndexDia());
-			//System.out.println("TR: " + st.getTrueRange() + "\n");
-		}
-	}
-
 }

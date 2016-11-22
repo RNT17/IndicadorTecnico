@@ -33,7 +33,7 @@ public class CalculadoraServiceImpl {
 		return stockTrend;
 	}
 	
-	public List<StockTrend> calcularMediaExponencial(String simbol, Calendar dtInicio, Calendar dtFim, int periodo) {	
+	public List<StockTrend> calcularMediaExponencial(String simbol, Calendar dtInicio, Calendar dtFim, int periodo) {
 		List<StockTrend> stockTrend = null;
 
 		try {
@@ -69,7 +69,7 @@ public class CalculadoraServiceImpl {
 		return stockTrend;
 	}
 	
-	public List<StockTrend> calcularAverageTrueRange(String simbol, Calendar dtInicio, Calendar dtFim, int periodo) {		
+	public List<StockTrend> calcularAverageTrueRange(String simbol, Calendar dtInicio, Calendar dtFim, int periodo) {
 		List<StockTrend> stockTrend = null;
 
 		try {

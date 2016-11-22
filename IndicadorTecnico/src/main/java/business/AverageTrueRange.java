@@ -1,6 +1,5 @@
 package business;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,12 +52,5 @@ public class AverageTrueRange {
 		double atr = ((atrAnterior * (periodo-1)) + trAtual) / periodo;
 		
 		return atr;
-	}
-	
-	@SuppressWarnings("unused")
-	private void print(double mediaCotacao, Cotacao cotacao){
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		String dtStr = format.format(cotacao.getDate().getTime());
-		System.out.println("Dia: "+dtStr+ ", ATR: "+mediaCotacao);
 	}
 }

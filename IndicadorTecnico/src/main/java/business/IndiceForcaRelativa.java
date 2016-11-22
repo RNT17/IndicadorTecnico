@@ -111,11 +111,4 @@ public class IndiceForcaRelativa {
 
 		return mediaPerda;
 	}
-
-	@SuppressWarnings("unused")
-	private void print(double mediaCotacao, Cotacao cotacao){
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		String dtStr = format.format(cotacao.getDate().getTime());
-		System.out.println("Dia: "+dtStr+ ", IFR: "+mediaCotacao);
-	}
 }
