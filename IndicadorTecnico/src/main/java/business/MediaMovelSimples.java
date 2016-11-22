@@ -1,6 +1,5 @@
 package business;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,11 +40,5 @@ public class MediaMovelSimples {
 			totalFechamento += cotacao.getClose();
 
 		return totalFechamento / periodo;
-	}
-	
-	public void print(double mediaCotacao, Cotacao cotacao){
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		String dtStr = format.format(cotacao.getDate().getTime());
-		System.out.println("Dia: "+dtStr+ ", sma: "+mediaCotacao);
 	}
 }

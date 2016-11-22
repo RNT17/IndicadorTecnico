@@ -54,15 +54,6 @@ public class CotacoesFactory {
 			index++;
 		}
 	}
-	
-	@SuppressWarnings("unused")
-	private void setOrdemDia(Cotacoes cotacoes) {
-		int index = 1;//cotacoes.getTotal();
-		for (Cotacao cotacao : cotacoes.getListaCotacoes()) {			
-			cotacao.setIndexDia(index);
-			index++;
-		}
-	}
 }
 
 

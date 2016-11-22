@@ -17,10 +17,8 @@ public class Cotacao implements Comparable<Cotacao>{
 	private double volume;
 	private double adj_close;
 	private double variacao;
-	private int indexDia;
 	private double trueRange;
-	private double ganho;
-	private double perda;
+
 
 	public Calendar getDate() {
 		return date;
@@ -84,30 +82,6 @@ public class Cotacao implements Comparable<Cotacao>{
 	
 	public void setVariacao(double variacao){
 		this.variacao = variacao;
-	}
-
-	public int getIndexDia() {
-		return indexDia;
-	}
-
-	public void setIndexDia(int indexDia) {
-		this.indexDia = indexDia;
-	}
-	
-	public double getGanho() {
-		return ganho;
-	}
-
-	public void setGanho(double ganho) {
-		this.ganho = ganho;
-	}
-	
-	public double getPerda() {
-		return perda;
-	}
-
-	public void setPerda(double perda) {
-		this.perda = perda;
 	}
 	
 	public double getTrueRange(){

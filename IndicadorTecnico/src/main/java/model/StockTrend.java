@@ -1,5 +1,6 @@
 package model;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 
 public class StockTrend {
