@@ -14,7 +14,7 @@ public class CalculadoraTecnica implements CalculadoraTecnicaInterface {
 	CalculadoraServiceImpl calculadoraService = new CalculadoraServiceImpl();
 	
 	@Override
-	public List<StockTrend> calcularMediaMovel(String simbol, String dtInicio, String dtFim, int periodo){		
+	public List<StockTrend> calcularMediaMovel(String simbol, Calendar dtInicio, Calendar dtFim, int periodo){		
 		return calculadoraService.calcularMediaMovel(simbol, dtInicio, dtFim, periodo);
 	}
 	

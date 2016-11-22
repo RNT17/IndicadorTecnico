@@ -27,18 +27,18 @@ public class AverageTrueRange {
 					
 					stATR = new StockTrend(cotacao, cotacoesPeriodo.firstAtr(periodo));
 					listStATR.add(stATR);
-				}
-				
-				tempCotacoes.add(cotacao);				
-				Cotacoes cotacoesPeriodo = new Cotacoes(tempCotacoes);
-				
-				double atrAnterior = listaAverageTrueRange.get(listaAverageTrueRange.size() - 1);
-				double trend = this.calculaAverageTrueRange(cotacoesPeriodo, atrAnterior, periodo);
-				listaAverageTrueRange.add(trend);
+				}else{
+					tempCotacoes.add(cotacao);				
+					Cotacoes cotacoesPeriodo = new Cotacoes(tempCotacoes);
+					
+					double atrAnterior = listaAverageTrueRange.get(listaAverageTrueRange.size() - 1);
+					double trend = this.calculaAverageTrueRange(cotacoesPeriodo, atrAnterior, periodo);
+					listaAverageTrueRange.add(trend);
 
-				stATR = new StockTrend(cotacao, trend);
-				listStATR.add(stATR);
-				
+					stATR = new StockTrend(cotacao, trend);
+					listStATR.add(stATR);			
+				}				
+								
 				tempCotacoes.remove(0);
 			}
 		}
